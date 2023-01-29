@@ -93,8 +93,6 @@ public class TestTrello {
         //Check If Lists Are Created
         driver.getPageSource().contains("List A");
         driver.getPageSource().contains("List B");
-        //Assert.assertEquals(driver.findElement(By.xpath(listACreated)).getText(), "List A", "List A Not Created");
-        //Assert.assertEquals(driver.findElement(By.xpath(listBCreated)).getText(), "List B", "List B Not Created");
 
         //Create a Card In List A
         new WebDriverWait(driver, 40).until(ExpectedConditions.elementToBeClickable(By.xpath(createCardText))).click();
